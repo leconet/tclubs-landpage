@@ -800,7 +800,7 @@
     .trust-row span {border:1px solid var(--line); background:#fffdf9; border-radius:999px; padding:10px 14px; font-weight:800; font-size:.9rem;}
     .product-grid {display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; margin-top:28px;}
     .product-card {background:var(--paper); border:1px solid var(--line); border-radius:24px; overflow:hidden; box-shadow:0 12px 34px rgba(0,0,0,.06);}
-    .product-card img {width:100%; aspect-ratio: 4/3; object-fit:cover; display:block;}
+    .product-card img {width:100%; aspect-ratio: 24/17; object-fit:contain; object-position:center; display:block; background:#f6f4f0; padding:10px;}
     .product-card .product-copy {padding:20px;}
     .product-card h3 {margin:0 0 8px; font-size:1.18rem;}
     .product-card p {margin:0; color:var(--muted); line-height:1.55; font-size:.98rem;}
@@ -819,7 +819,57 @@
       .page-hero {padding:44px 0 28px;}
       .product-grid {gap:14px;}
     }
-</style>
+
+    .color-preview-card {
+      display: block;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: #f6f4f0;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .color-preview-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 52px rgba(0,0,0,.13);
+    }
+
+    .color-preview-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 24/17;
+      object-fit: contain;
+      background: #f6f4f0;
+    }
+
+    .color-chart {
+      margin: 30px auto 0;
+      max-width: 1040px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .color-chart img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+      .product-card img,
+      .color-preview-card img {
+        padding: 6px;
+      }
+      .color-chart {
+        border-radius: 20px;
+      }
+    }
+
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -845,7 +895,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="/" aria-label="Tclubs">
-        <img src="/assets/logo-tclubs.png" alt="Tclubs" />
+        <img src="../assets/logo-tclubs.png" alt="Tclubs" />
       </a>
       <nav class="menu" aria-label="Menu principal">
         <a href="/">Início</a>
@@ -876,8 +926,8 @@
             <span>Entrega Brasil</span>
           </div>
         </div>
-        <a class="image-card" href="/assets/camisas-camisetas-atacado.jpg" aria-label="Ampliar imagem de camisas e camisetas lisas no atacado">
-          <img src="/assets/camisas-camisetas-atacado.jpg" alt="Camisas e camisetas lisas no atacado no Rio de Janeiro" loading="eager" />
+        <a class="image-card" href="../assets/camisas-camisetas-atacado.jpg" aria-label="Ampliar imagem de camisas e camisetas lisas no atacado">
+          <img src="../assets/camisas-camisetas-atacado.jpg" alt="Camisas e camisetas lisas no atacado no Rio de Janeiro" loading="eager" />
         </a>
       </div>
     </section>
@@ -910,22 +960,22 @@
         <h2>Modelos de camisas e camisetas lisas no atacado</h2>
         <p>A Tclubs trabalha com diversos modelos para atacado, revenda, uniformes, eventos e personalização. As opções podem variar conforme estoque, grade, cor, tamanho e tipo de malha disponível no momento da consulta.</p>
         <div class="product-grid">
-          <article class="product-card"><img src="/assets/modelo-premium-penteada.jpg" alt="Camisetas em malha premium penteada no atacado"><div class="product-copy"><h3>Camisetas em malha premium penteada</h3><p>Opção com toque mais valorizado para revenda, uniforme, marca própria e personalização.</p></div></article>
-          <article class="product-card"><img src="/assets/modelo-cardada.jpg" alt="Camisetas em malha cardada no atacado"><div class="product-copy"><h3>Camisetas em malha cardada</h3><p>Alternativa comercial para pedidos em volume, ações promocionais e uso cotidiano.</p></div></article>
-          <article class="product-card"><img src="/assets/modelo-oversized.jpg" alt="Camisas oversized no atacado"><div class="product-copy"><h3>Camisas oversized</h3><p>Modelagem ampla para marcas, lojas e projetos com apelo mais atual.</p></div></article>
-          <article class="product-card"><img src="/assets/modelo-pima.jpg" alt="Camisetas em malha Pima no atacado"><div class="product-copy"><h3>Camisetas em malha Pima</h3><p>Linha superior para projetos que exigem toque, caimento e percepção premium.</p></div></article>
-          <article class="product-card"><img src="/assets/modelo-babylook.jpg" alt="Baby looks no atacado"><div class="product-copy"><h3>Baby looks</h3><p>Modelos femininos para revenda, uniformes, eventos e personalização.</p></div></article>
-          <article class="product-card"><img src="/assets/modelo-polo.jpg" alt="Camisas polo no atacado"><div class="product-copy"><h3>Camisas polo</h3><p>Produto indicado para empresas, uniformes, atendimento, eventos e projetos corporativos.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-premium-penteada.jpg" alt="Camisetas em malha premium penteada no atacado"><div class="product-copy"><h3>Camisetas em malha premium penteada</h3><p>Opção com toque mais valorizado para revenda, uniforme, marca própria e personalização.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-cardada.jpg" alt="Camisetas em malha cardada no atacado"><div class="product-copy"><h3>Camisetas em malha cardada</h3><p>Alternativa comercial para pedidos em volume, ações promocionais e uso cotidiano.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-oversized.jpg" alt="Camisas oversized no atacado"><div class="product-copy"><h3>Camisas oversized</h3><p>Modelagem ampla para marcas, lojas e projetos com apelo mais atual.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-pima.jpg" alt="Camisetas em malha Pima no atacado"><div class="product-copy"><h3>Camisetas em malha Pima</h3><p>Linha superior para projetos que exigem toque, caimento e percepção premium.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-babylook.jpg" alt="Baby looks no atacado"><div class="product-copy"><h3>Baby looks</h3><p>Modelos femininos para revenda, uniformes, eventos e personalização.</p></div></article>
+          <article class="product-card"><img src="../assets/modelo-polo.jpg" alt="Camisas polo no atacado"><div class="product-copy"><h3>Camisas polo</h3><p>Produto indicado para empresas, uniformes, atendimento, eventos e projetos corporativos.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="cores">
       <div class="container section-grid reverse">
         <div>
           <span class="eyebrow">Estoque e cores</span>
           <h2>22 cores disponíveis e outros modelos sob consulta</h2>
-          <p>A linha de atacado da Tclubs conta com 22 cores disponíveis, sujeitas à confirmação de estoque, grade, malha, modelo e tamanho. Outros modelos, cores especiais e tipos de malha podem ser consultados pelo WhatsApp.</p>
+          <p>A linha de atacado da Tclubs conta com 22 cores disponíveis conforme estoque, grade, malha, modelo e tamanho. Para facilitar a escolha, consulte a cartela completa antes de finalizar o pedido.</p>
           <ul class="check-list">
             <li>Consulta rápida de estoque</li>
             <li>Tabela comercial pelo WhatsApp</li>
@@ -934,12 +984,24 @@
             <li>Condições comerciais conforme volume do pedido</li>
           </ul>
           <div class="section-actions">
-            <a class="btn btn-primary" href="https://wa.me/5521995599016?text=Ol%C3%A1%2C%20quero%20consultar%20cores%2C%20modelos%20e%20estoque%20de%20camisetas%20no%20atacado." target="_blank" rel="noopener">Consultar estoque</a>
+            <a class="btn btn-primary" href="#cartela-cores">Ver cartela de cores</a>
+            <a class="btn btn-outline" href="https://wa.me/5521995599016?text=Ol%C3%A1%2C%20quero%20consultar%20cores%2C%20modelos%20e%20estoque%20de%20camisetas%20no%20atacado." target="_blank" rel="noopener">Consultar estoque</a>
           </div>
         </div>
-        <a class="image-card" href="/assets/hero-tclubs.jpg" aria-label="Ampliar imagem de estoque e operação Tclubs">
-          <img src="/assets/hero-tclubs.jpg" alt="Estoque de camisas e camisetas lisas para atacado" loading="lazy" />
+        <a class="color-preview-card" href="#cartela-cores" aria-label="Ver cartela completa de cores da Camisa Premium 2024">
+          <img src="../assets/cores-22-premium-tclubs.jpg" alt="Mini painel com 22 cores disponíveis da linha Camisa Premium Tclubs" loading="lazy" />
         </a>
+      </div>
+    </section>
+
+    <section id="cartela-cores">
+      <div class="container">
+        <span class="eyebrow">Cartela de cores</span>
+        <h2>Cartela de cores da Camisa Premium 2024</h2>
+        <p>Confira as cores disponíveis da linha Camisa Premium. A disponibilidade pode variar conforme estoque, modelo, tamanho, grade e volume do pedido.</p>
+        <figure class="color-chart">
+          <img src="../assets/cartela-cores-premium-2024.jpg" alt="Cartela de cores da Camisa Premium 2024 da Tclubs" loading="lazy" />
+        </figure>
       </div>
     </section>
 
@@ -1005,7 +1067,7 @@
   <footer>
     <div class="container footer-grid">
       <div>
-        <img class="footer-logo" src="/assets/logo-tclubs.png" alt="Tclubs" />
+        <img class="footer-logo" src="../assets/logo-tclubs.png" alt="Tclubs" />
         <p>A Tclubs é um hub de malharia no Rio de Janeiro, com mais de 40 anos de experiência no mercado têxtil. Atendemos revendedores, empresas e marcas com camisas e camisetas lisas no atacado, personalização, private label, estamparia localizada e malha no atacado, com entrega para todo o Brasil.</p>
       </div>
       <div>
