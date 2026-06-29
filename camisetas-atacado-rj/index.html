@@ -996,7 +996,130 @@
       }
     }
 
-  </style>
+  
+
+    .product-card img.zoomable-product-image {
+      cursor: zoom-in;
+      transition: transform .25s ease, filter .25s ease;
+    }
+
+    .product-card img.zoomable-product-image:hover {
+      transform: scale(1.025);
+      filter: contrast(1.02);
+    }
+
+    .product-card img.zoomable-product-image:focus {
+      outline: 3px solid rgba(199, 37, 45, .35);
+      outline-offset: 4px;
+    }
+
+    .tech-details {
+      margin-top: 14px;
+      border-top: 1px solid rgba(17,17,17,.10);
+      padding-top: 12px;
+    }
+
+    .tech-details summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 900;
+      color: var(--red);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .tech-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tech-details summary::after {
+      content: "+";
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(199, 37, 45, .10);
+      color: var(--red);
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .tech-details[open] summary::after {
+      content: "−";
+    }
+
+    .tech-details dl {
+      margin: 12px 0 0;
+      display: grid;
+      gap: 7px;
+      color: #3f3f3f;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .tech-details dt {
+      font-weight: 900;
+      color: #161616;
+      margin-top: 4px;
+    }
+
+    .tech-details dd {
+      margin: -4px 0 0;
+    }
+
+    .zoom-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(0,0,0,.82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    .zoom-modal.open {
+      display: flex;
+    }
+
+    .zoom-modal img {
+      width: auto;
+      max-width: min(92vw, 980px);
+      max-height: 86vh;
+      object-fit: contain;
+      border-radius: 24px;
+      background: #f3f3f3;
+      box-shadow: 0 28px 90px rgba(0,0,0,.42);
+    }
+
+    .zoom-close {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 0;
+      background: #fff;
+      color: #111;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+
+    @media (max-width: 700px) {
+      .tech-details summary { font-size: 13px; }
+      .tech-details dl { font-size: 13px; }
+      .zoom-modal { padding: 14px; }
+      .zoom-modal img { max-width: 94vw; max-height: 82vh; border-radius: 18px; }
+    }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1034,7 +1157,142 @@
     gtag('js', new Date());
     gtag('config', 'G-9V2YKQY7ZW');
   </script>
-</head>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.tclubs.com.br/camisetas-atacado-rj/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A Tclubs vende camisetas lisas no atacado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Tclubs fornece camisas e camisetas lisas no atacado para revendedores, empresas, eventos, uniformes e personalização, conforme disponibilidade de estoque."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais modelos estão disponíveis hoje?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os modelos atuais incluem camisetas em malha premium penteada, camisetas infantis em malha premium, camisetas em malha cardada, camisas oversized, camisetas em malha Pima, baby looks e camisas polo. Outros modelos e malhas podem ser consultados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês trabalham com camisetas infantis no atacado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Tclubs atende pedidos de camisetas infantis em malha premium, conforme disponibilidade de grade, cor, tamanho e estoque."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês têm quantas cores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A linha Premium trabalha com 22 cores disponíveis, enquanto a linha Polo possui 31 cores. A disponibilidade depende de estoque, grade, modelo, tamanho e tipo de malha no momento da consulta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês atendem fora do Rio de Janeiro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Tclubs atende no Rio de Janeiro e entrega para todo o Brasil conforme pedido, volume e condições comerciais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso comprar para revenda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Tclubs atende revendedores, lojistas e marcas que precisam de camisas e camisetas lisas para revenda, personalização ou composição de coleção."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.tclubs.com.br/camisetas-atacado-rj/#modelos-atacado",
+      "name": "Modelos de camisas e camisetas lisas no atacado Tclubs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisetas em malha premium penteada",
+            "description": "Malha 30.1 penteada, 100% algodão, acabamento premium, aproximadamente 160 g/m², grade P ao XG e G1 a G3, 22 cores conforme estoque.",
+            "image": "https://www.tclubs.com.br/assets/modelo-premium-penteada.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisetas infantis em malha premium",
+            "description": "Malha 30.1 penteada, 100% algodão, acabamento premium, aproximadamente 160 g/m², grade infantil conforme estoque, 22 cores conforme estoque.",
+            "image": "https://www.tclubs.com.br/assets/modelo-infantil-premium.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisetas em malha cardada",
+            "description": "Malha 30.1 cardada, 100% algodão, aproximadamente 150 g/m², grade P ao XG e G1 a G3, 22 cores conforme estoque.",
+            "image": "https://www.tclubs.com.br/assets/modelo-cardada.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisas oversized",
+            "description": "Malhão em fio 30.1 penteado, 100% algodão, aproximadamente 270 g/m², grade P ao XG, cores preto, off white e branco, outras sob consulta.",
+            "image": "https://www.tclubs.com.br/assets/modelo-oversized.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisetas em malha Pima",
+            "description": "Malha fio 30.1 Pima com 5% de elastano, toque super premium, aproximadamente 180 g/m², grade P ao XG e G1 a G3, cores preto, off white e branco, outras sob consulta.",
+            "image": "https://www.tclubs.com.br/assets/modelo-pima.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Thing",
+            "name": "Baby looks",
+            "description": "Malha 30.1 penteada, 100% algodão, acabamento premium, aproximadamente 160 g/m², grade P ao XG e G1 a G3, 22 cores conforme estoque.",
+            "image": "https://www.tclubs.com.br/assets/modelo-babylook.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Thing",
+            "name": "Camisas polo",
+            "description": "Malha 30.1, 50% algodão e 50% poliéster, aproximadamente 170 g/m², grade P ao XG e G1 a G3, 31 cores conforme estoque.",
+            "image": "https://www.tclubs.com.br/assets/modelo-polo.webp"
+          }
+        }
+      ]
+    }
+  ]
+}</script></head>
 <body>
 <header>
 <div class="container nav">
@@ -1071,7 +1329,6 @@
 <span>Entrega Brasil</span>
 </div>
 </div>
-
 </div>
 </section>
 <section>
@@ -1101,12 +1358,12 @@
 <h2>Modelos de camisas e camisetas lisas no atacado</h2>
 <p>A Tclubs trabalha com modelos adultos, femininos, infantis e corporativos. As opções variam conforme estoque, grade, cor, tamanho e tipo de malha disponível no momento da consulta.</p>
 <div class="product-grid">
-<article class="product-card"><img alt="Camisetas em malha premium penteada no atacado" src="../assets/modelo-premium-penteada.webp"/><div class="product-copy"><h3>Camisetas em malha premium penteada</h3><p>Opção com toque mais valorizado para revenda, uniforme, marca própria e personalização.</p></div></article><article class="product-card"><img alt="Camisetas infantis em malha premium no atacado" src="../assets/modelo-infantil-premium.webp"/><div class="product-copy"><h3>Camisetas infantis em malha premium</h3><p>Linha infantil em malha premium para revenda, escolas, eventos e personalização, com conforto e boa apresentação.</p></div></article>
-<article class="product-card"><img alt="Camisetas em malha cardada no atacado" src="../assets/modelo-cardada.webp"/><div class="product-copy"><h3>Camisetas em malha cardada</h3><p>Alternativa comercial para pedidos em volume, ações promocionais e uso cotidiano.</p></div></article>
-<article class="product-card"><img alt="Camisas oversized no atacado" src="../assets/modelo-oversized.webp"/><div class="product-copy"><h3>Camisas oversized</h3><p>Modelagem ampla para marcas, lojas e projetos com apelo mais atual.</p></div></article>
-<article class="product-card"><img alt="Camisetas em malha Pima no atacado" src="../assets/modelo-pima.webp"/><div class="product-copy"><h3>Camisetas em malha Pima</h3><p>Linha superior para projetos que exigem toque, caimento e percepção premium.</p></div></article>
-<article class="product-card"><img alt="Baby looks no atacado" src="../assets/modelo-babylook.webp"/><div class="product-copy"><h3>Baby looks</h3><p>Modelos femininos para revenda, uniformes, eventos e personalização.</p></div></article>
-<article class="product-card"><img alt="Camisas polo no atacado" src="../assets/modelo-polo.webp"/><div class="product-copy"><h3>Camisas polo</h3><p>Produto indicado para empresas, uniformes, atendimento, eventos e projetos corporativos.</p></div></article>
+<article class="product-card"><img alt="Camisetas em malha premium penteada no atacado" aria-label="Ampliar foto de Camisetas em malha premium penteada" class="zoomable-product-image" data-zoom-alt="Camisetas em malha premium penteada no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-premium-penteada.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Camisetas em malha premium penteada</h3><p>Opção com toque mais valorizado para revenda, uniforme, marca própria e personalização.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha 30.1 penteada, 100% algodão, com acabamento premium.</dd><dt>Gramatura</dt><dd>aproximadamente 160 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, além de G1, G2 e G3.</dd><dt>Cores disponíveis</dt><dd>22 cores disponíveis, conforme estoque.</dd></dl></details></div></article><article class="product-card"><img alt="Camisetas infantis em malha premium no atacado" aria-label="Ampliar foto de Camisetas infantis em malha premium" class="zoomable-product-image" data-zoom-alt="Camisetas infantis em malha premium no atacado" decoding="async" height="1375" loading="lazy" role="button" src="../assets/modelo-infantil-premium.webp" tabindex="0" width="1100"/><div class="product-copy"><h3>Camisetas infantis em malha premium</h3><p>Linha infantil em malha premium para revenda, escolas, eventos e personalização, com conforto e boa apresentação.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha 30.1 penteada, 100% algodão, com acabamento premium.</dd><dt>Gramatura</dt><dd>aproximadamente 160 g/m².</dd><dt>Grade disponível</dt><dd>infantil, conforme estoque.</dd><dt>Cores disponíveis</dt><dd>22 cores disponíveis, conforme estoque.</dd></dl></details></div></article>
+<article class="product-card"><img alt="Camisetas em malha cardada no atacado" aria-label="Ampliar foto de Camisetas em malha cardada" class="zoomable-product-image" data-zoom-alt="Camisetas em malha cardada no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-cardada.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Camisetas em malha cardada</h3><p>Alternativa comercial para pedidos em volume, ações promocionais e uso cotidiano.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha 30.1 cardada, 100% algodão.</dd><dt>Gramatura</dt><dd>aproximadamente 150 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, além de G1, G2 e G3.</dd><dt>Cores disponíveis</dt><dd>22 cores disponíveis, conforme estoque.</dd></dl></details></div></article>
+<article class="product-card"><img alt="Camisas oversized no atacado" aria-label="Ampliar foto de Camisas oversized" class="zoomable-product-image" data-zoom-alt="Camisas oversized no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-oversized.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Camisas oversized</h3><p>Modelagem ampla para marcas, lojas e projetos com apelo mais atual.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malhão em fio 30.1 penteado, 100% algodão.</dd><dt>Gramatura</dt><dd>aproximadamente 270 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, conforme estoque.</dd><dt>Cores disponíveis</dt><dd>preto, off white e branco. Outras cores sob consulta.</dd></dl></details></div></article>
+<article class="product-card"><img alt="Camisetas em malha Pima no atacado" aria-label="Ampliar foto de Camisetas em malha Pima" class="zoomable-product-image" data-zoom-alt="Camisetas em malha Pima no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-pima.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Camisetas em malha Pima</h3><p>Linha superior para projetos que exigem toque, caimento e percepção premium.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha fio 30.1 Pima com 5% de elastano, com toque super premium.</dd><dt>Gramatura</dt><dd>aproximadamente 180 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, além de G1, G2 e G3, conforme estoque.</dd><dt>Cores disponíveis</dt><dd>preto, off white e branco. Outras cores sob consulta.</dd></dl></details></div></article>
+<article class="product-card"><img alt="Baby looks no atacado" aria-label="Ampliar foto de Baby looks" class="zoomable-product-image" data-zoom-alt="Baby looks no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-babylook.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Baby looks</h3><p>Modelos femininos para revenda, uniformes, eventos e personalização.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha 30.1 penteada, 100% algodão, com acabamento premium.</dd><dt>Gramatura</dt><dd>aproximadamente 160 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, além de G1, G2 e G3.</dd><dt>Cores disponíveis</dt><dd>22 cores disponíveis, conforme estoque.</dd></dl></details></div></article>
+<article class="product-card"><img alt="Camisas polo no atacado" aria-label="Ampliar foto de Camisas polo" class="zoomable-product-image" data-zoom-alt="Camisas polo no atacado" decoding="async" height="850" loading="lazy" role="button" src="../assets/modelo-polo.webp" tabindex="0" width="1200"/><div class="product-copy"><h3>Camisas polo</h3><p>Produto indicado para empresas, uniformes, atendimento, eventos e projetos corporativos.</p><details class="tech-details"><summary>Ver dados técnicos</summary><dl><dt>Tipo de malha</dt><dd>malha 30.1, 50% algodão e 50% poliéster.</dd><dt>Gramatura</dt><dd>aproximadamente 170 g/m².</dd><dt>Grade disponível</dt><dd>P ao XG, além de G1, G2 e G3.</dd><dt>Cores disponíveis</dt><dd>31 cores disponíveis, conforme estoque.</dd></dl></details></div></article>
 </div>
 </div>
 </section>
@@ -1114,8 +1371,8 @@
 <div class="container section-grid reverse">
 <div>
 <span class="eyebrow">Estoque e cores</span>
-<h2>22 cores disponíveis e outros modelos sob consulta</h2>
-<p>A linha de atacado da Tclubs conta com 22 cores disponíveis conforme estoque, grade, malha, modelo e tamanho. Para facilitar a escolha, consulte a cartela completa antes de finalizar o pedido.</p>
+<h2>Cores disponíveis e outros modelos sob consulta</h2>
+<p>A linha Premium da Tclubs conta com 22 cores disponíveis conforme estoque, grade e tamanho. A linha Polo possui 31 cores disponíveis, e modelos como Pima e oversized podem ter cores específicas ou sob consulta. Para facilitar a escolha, consulte a cartela e confirme a disponibilidade antes de finalizar o pedido.</p>
 <ul class="check-list">
 <li>Consulta rápida de estoque</li>
 <li>Tabela comercial pelo WhatsApp</li>
@@ -1170,7 +1427,7 @@
 <div class="faq">
 <details open=""><summary>A Tclubs vende camisetas lisas no atacado?</summary><p>Sim. A Tclubs fornece camisas e camisetas lisas no atacado para revendedores, empresas, eventos, uniformes e personalização, conforme disponibilidade de estoque.</p></details>
 <details><summary>Quais modelos estão disponíveis hoje?</summary><p>Os modelos atuais incluem camisetas em malha premium penteada, camisetas infantis em malha premium, camisetas em malha cardada, camisas oversized, camisetas em malha Pima, baby looks e camisas polo. Outros modelos e malhas podem ser consultados.</p></details><details><summary>Vocês trabalham com camisetas infantis no atacado?</summary><p>Sim. A Tclubs atende pedidos de camisetas infantis em malha premium, conforme disponibilidade de grade, cor, tamanho e estoque.</p></details>
-<details><summary>Vocês têm quantas cores?</summary><p>A Tclubs trabalha com 22 cores disponíveis, sujeitas à confirmação de estoque, grade, modelo, tamanho e tipo de malha no momento da consulta.</p></details>
+<details><summary>Vocês têm quantas cores?</summary><p>A linha Premium trabalha com 22 cores disponíveis, enquanto a linha Polo possui 31 cores. A disponibilidade depende de estoque, grade, modelo, tamanho e tipo de malha no momento da consulta.</p></details>
 <details><summary>Vocês atendem fora do Rio de Janeiro?</summary><p>Sim. A Tclubs atende no Rio de Janeiro e entrega para todo o Brasil conforme pedido, volume e condições comerciais.</p></details>
 <details><summary>Posso comprar para revenda?</summary><p>Sim. A Tclubs atende revendedores, lojistas e marcas que precisam de camisas e camisetas lisas para revenda, personalização ou composição de coleção.</p></details>
 </div>
@@ -1342,6 +1599,41 @@
       });
     });
   })();
+</script>
+<div aria-hidden="true" class="zoom-modal" id="productZoomModal">
+<button aria-label="Fechar imagem ampliada" class="zoom-close" type="button">×</button>
+<img alt="" id="productZoomImage" src=""/>
+</div>
+<script>
+(function(){
+  const modal = document.getElementById('productZoomModal');
+  const modalImg = document.getElementById('productZoomImage');
+  const closeBtn = modal ? modal.querySelector('.zoom-close') : null;
+  if (!modal || !modalImg || !closeBtn) return;
+  function openZoom(img){
+    modalImg.src = img.currentSrc || img.src;
+    modalImg.alt = img.getAttribute('data-zoom-alt') || img.alt || 'Imagem ampliada do modelo';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closeZoom(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.zoomable-product-image').forEach(function(img){
+    img.addEventListener('click', function(){ openZoom(img); });
+    img.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openZoom(img); }
+    });
+  });
+  closeBtn.addEventListener('click', closeZoom);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeZoom(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && modal.classList.contains('open')) closeZoom(); });
+})();
 </script>
 </body>
 </html>
